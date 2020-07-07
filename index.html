@@ -5,96 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CATS QUIZ</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Boostrap Link-->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
   </head>
   <body>
-    <br />
-    <main class="container">
-      <article class="jumbotron">
-        <h1 class="display-4">CATS QUIZ</h1>
-        <!-- Question 1 -->
-        <hr class="my-4" />
-        <div class="card" style="width: 65rem;">
-          <!-- <img src="..." class="card-img-top" alt="..." /> -->
-          <div class="card-body">
-            <h5 class="card-title">Question 1</h5>
-            <p class="card-text">
-              Who wrote and composed CATS the Musical?
-            </p>
-            <a href="#" class="btn btn-primary">A. Stephen Sondheim</a>
-            <a href="#" class="btn btn-primary">B. Celine Dion</a>
-            <a href="#" class="btn btn-primary">C. Andrew Lloyd Weber</a>
-            <a href="#" class="btn btn-primary">D. Cats Did Obvi!</a>
-          </div>
+    <div class="container">
+      <h1>CATS QUIZ</h1>
+      <!-- timer -->
+      <span class="timer">90</span>
+    </div>
+
+    <div class="container row" id="quiz">
+      <div class="column">
+        <div>
+          <p class="question">Question</p>
+          <input type="radio" /> <br />
+          <input type="radio" /> <br />
+          <input type="radio" /> <br />
+          <input type="radio" /> <br />
         </div>
-        <!-- Question 2 -->
-        <hr class="my-4" />
-        <div class="card" style="width: 65rem;">
-          <!-- <img src="..." class="card-img-top" alt="..." /> -->
-          <div class="card-body">
-            <h5 class="card-title">Question 1</h5>
-            <p class="card-text">
-              Who wrote and composed CATS the Musical?
-            </p>
-            <a href="#" class="btn btn-primary">A. Stephen Sondheim</a>
-            <a href="#" class="btn btn-primary">B. Celine Dion</a>
-            <a href="#" class="btn btn-primary">C. Andrew Lloyd Weber</a>
-            <a href="#" class="btn btn-primary">D. Cats Did Obvi!</a>
-          </div>
-        </div>
-        <!-- Question 3 -->
-        <hr class="my-4" />
-        <div class="card" style="width: 65rem;">
-          <!-- <img src="..." class="card-img-top" alt="..." /> -->
-          <div class="card-body">
-            <h5 class="card-title">Question 1</h5>
-            <p class="card-text">
-              Who wrote and composed CATS the Musical?
-            </p>
-            <a href="#" class="btn btn-primary">A. Stephen Sondheim</a>
-            <a href="#" class="btn btn-primary">B. Celine Dion</a>
-            <a href="#" class="btn btn-primary">C. Andrew Lloyd Weber</a>
-            <a href="#" class="btn btn-primary">D. Cats Did Obvi!</a>
-          </div>
-        </div>
-        <!-- Question 4-->
-        <hr class="my-4" />
-        <div class="card" style="width: 65rem;">
-          <!-- <img src="..." class="card-img-top" alt="..." /> -->
-          <div class="card-body">
-            <h5 class="card-title">Question 1</h5>
-            <p class="card-text">
-              Who wrote and composed CATS the Musical?
-            </p>
-            <a href="#" class="btn btn-primary">A. Stephen Sondheim</a>
-            <a href="#" class="btn btn-primary">B. Celine Dion</a>
-            <a href="#" class="btn btn-primary">C. Andrew Lloyd Weber</a>
-            <a href="#" class="btn btn-primary">D. Cats Did Obvi!</a>
-          </div>
-        </div>
-        <!-- Question 5 -->
-        <hr class="my-4" />
-        <div class="card" style="width: 65rem;">
-          <!-- <img src="..." class="card-img-top" alt="..." /> -->
-          <div class="card-body">
-            <h5 class="card-title">Question 1</h5>
-            <p class="card-text">
-              Who wrote and composed CATS the Musical?
-            </p>
-            <a href="#" class="btn btn-primary">A. Stephen Sondheim</a>
-            <a href="#" class="btn btn-primary">B. Celine Dion</a>
-            <a href="#" class="btn btn-primary">C. Andrew Lloyd Weber</a>
-            <a href="#" class="btn btn-primary">D. Cats Did Obvi!</a>
-          </div>
-        </div>
-      </article>
-    </main>
+        <button type="button" id="button">User answer to populate</button>
+        <div id="results"></div>
+      </div>
+    </div>
     <script src="quizcode.js"></script>
   </body>
 </html>
