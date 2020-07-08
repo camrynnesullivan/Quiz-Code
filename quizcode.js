@@ -1,96 +1,85 @@
-//create an array with an actual quiz =====================================================
+//Starting Data
 
-var quiz = [
-  // question 1
-  {
-    q1: "Who wrote CATS the Musical?",
-    a: "Stephen Sondheim",
-    b: "Celine Dion",
-    c: "Prince",
-    d: "Andrew Lloyd Weber",
-  },
-  // question 2
-  {
-    q2: "CATS is based on a poem by...",
-    a: "Emily Dickinson",
-    b: "Emerson",
-    c: "T.S. Eliott",
-    d: "Tennessee Williams",
-  },
-
-  // question 3
-  {
-    q3: "What is a jellicle cat?",
-    a: "any cute beloved cat",
-    b: "alley cat",
-    c: "forest cat",
-    d: "mountain cat",
-  },
-];
-
-//DOM Elements ===========================================================================
+//Set Variables
 
 var timerEl = document.querySelector(".timer");
 var startEl = document.querySelector("#start");
 
-//Click Start
+var secondsLeft = 90;
+var score = 0;
 
-// var timeEl = document.querySelector(".time");
-// var mainEl = document.getElementById("main");
+//Array of Quesions for Quiz
+var quiz = [
+  // question 1
+  {
+    q1: "Who wrote CATS the Musical?",
+    a1: "Stephen Sondheim",
+    b1: "Celine Dion",
+    c1: "Prince",
+    d1: "Andrew Lloyd Weber",
 
-// var secondsLeft = 10;
+    // question 2
 
-// function setTime() {
-//   var timerInterval = setInterval(function () {
-//     secondsLeft--;
-//     timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
+    q2: "CATS is based on a poem by...",
+    a2: "Emily Dickinson",
+    b2: "Emerson",
+    c2: "T.S. Eliott",
+    d2: "Tennessee Williams",
 
-//     if (secondsLeft === 0) {
-//       clearInterval(timerInterval);
-//       sendMessage();
-//     }
-//   }, 1000);
-// }
-// ===========================================================================
-// GIVEN I am taking a code quiz
-// WHEN I click the start button
-// THEN a timer starts and I am presented with a question
-// WHEN I answer a question
-// THEN I am presented with another question
-// WHEN I answer a question incorrectly
-// THEN time is subtracted from the clock
-// WHEN all questions are answered or the timer reaches 0
-// THEN the game is over
-// WHEN the game is over
-// THEN I can save my initials and score
+    // question 3
 
-//====================================================================================
-// Predetermined Data example- Set everything to zero
-// score counter
-// timer
-// shit ton of variables
-// objects (are the mulitple choice answers?)
+    q3: "What is a jellicle cat?",
+    a3: "any cute beloved cat",
+    b3: "alley cat",
+    c3: "forest cat",
+    d3: "mountain cat",
+  },
+];
 
-// Quiz Elements
+//Array of Answers
 
-// Click Start button
+var answers = ["Andrew Lloyd Weber", "T.S. Eliott", "any cute beloved cat"];
 
-// start.addEventListener("click", startQuiz);
+//User Interactions
 
-//Then 2min timer starts
+//When we click on Start, timer countdown starts
 
-//First question pops up
+startEl.addEventListener("click", function () {
+  startEl.style.display = "none";
+  var myInterval = setInterval(function () {
+    timerEl.textContent = secondsLeft;
+    secondsLeft--;
+    if (secondsLeft === -1) {
+      clearInterval(myInterval);
+      sendMessage();
+    }
+  }, 1000);
+});
 
-//User Input Question one
+//Question 1 Appears -Function
 
-//if correct move on to next question
+//Handler Functions===============================================================================
 
-//else subtract 10 sec and then move to next question
+// Check answer - use answer array and .include
+//if it is correct
+//alert yay!
+//then move to the next question
 
-// if  the timer reaches zero GAME OVER
+// Else if it is wrong
+// alert wrong,
+//ten seconds taken away,
+// move to the next question
 
-// else if when all questions are answered GAME OVER
+//WHEN all questions are answered or the timer reaches 0
+//THEN the game is over
 
-// save the score and intials
+//Display Input===============================================================================
 
-// Return to start
+//WHEN the game is over
+//Clear screen
+//Reset Timer
+//Submit Button appears
+
+//THEN I can save my initials and score
+//When click submit button
+//Return to the beginning of quiz
