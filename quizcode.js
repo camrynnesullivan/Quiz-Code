@@ -108,7 +108,13 @@ var secondsLeft = 60;
 var score = 0;
 var click = 0;
 
-var answers = ["Andrew Lloyd Weber", "T.S. Eliott", "any cute beloved cat"];
+var answers = [
+  "Andrew Lloyd Weber",
+  "T.S. Eliott",
+  "any cute beloved cat",
+  "He is magical",
+  "All of the Above",
+];
 
 //Array of Quesions for Quiz
 var quiz = [
@@ -137,6 +143,22 @@ var quiz = [
     b2: "alley cat",
     c2: "forest cat",
     d2: "mountain cat",
+  },
+  // question 4
+  {
+    q3: "What is special about Mr. Mistofelees?",
+    a3: "He is funny",
+    b3: "He purrs alot",
+    c3: "He is magical",
+    d3: "He is cute",
+  },
+  // question 3
+  {
+    q4: "What is the plot of CATS the Musical?",
+    a4: "It's a fever dream",
+    b4: "It's just about cats being cats",
+    c4: "There is no plot.",
+    d4: "All of the Above",
   },
 ];
 
