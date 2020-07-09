@@ -1,19 +1,25 @@
-//Starting Data
+//Starting Data====================================================
 
 // Variables for Time Interval Function
 var timerEl = document.querySelector(".timer");
 var startEl = document.querySelector("#start");
 
-//Variable for Clear Screen Function
-var quizEl = document.querySelector("#quiz");
+// //Variable for Clear Screen Function
+// var quizEl = document.querySelector("#quiz");
 
 //Variables for Option
+var question = document.querySelector("#question");
 var optionA = document.querySelector("#optionA");
 var optionB = document.querySelector("#optionB");
 var optionC = document.querySelector("#optionC");
 var optionD = document.querySelector("#optionD");
 
+// Variables to Display Results
 var results = document.querySelector("#results");
+
+// Handler Functions ====================================================================
+
+//Check Answer Functions
 
 function checkAnswerA() {
   var questionData = quiz[questionNumber]["a" + questionNumber];
@@ -77,6 +83,8 @@ function checkAnswerD() {
   // displayQuestion();
 }
 
+//Display Message Functions
+
 function displayCorrectMessage() {
   results.textContent = "You were right! Here is your score: " + score;
 }
@@ -84,6 +92,8 @@ function displayCorrectMessage() {
 function displayWrongMessage() {
   results.textContent = "You were wrong! Here is your score: " + score;
 }
+
+// When the user clicks an answer, checkAnswer Functions are run
 
 optionA.addEventListener("click", checkAnswerA);
 optionB.addEventListener("click", checkAnswerB);
@@ -93,8 +103,6 @@ optionD.addEventListener("click", checkAnswerD);
 //Array
 
 var options = [optionA, optionB, optionC, optionD];
-
-var question = document.querySelector("#question");
 
 var secondsLeft = 60;
 var score = 0;
@@ -164,18 +172,18 @@ function displayQuestion() {
   optionD.innerHTML = quiz[questionNumber]["d" + questionNumber];
 }
 
-function clearScreen() {
-  console.log("hello");
-  if (questionNumber === -1) {
-    quizEl.textContent.display = "none";
-  }
-}
-
-clearScreen();
-// function nextQuestion() {
-//   questionNumber++;
-//   displayQuestion();
+// function clearScreen() {
+//   console.log("hello");
+//   if (questionNumber === -1) {
+//     quizEl.textContent.display = "none";
+//   }
 // }
+
+// clearScreen();
+// // function nextQuestion() {
+// //   questionNumber++;
+// //   displayQuestion();
+// // }
 
 // for (var i = 0; i < quiz.length; i++) {
 //   question.textContent = quiz[i]["q" + `${i}`];
@@ -189,30 +197,4 @@ clearScreen();
 //   optionD.innerHTML = quiz[i]["d" + `${i}`];
 // }
 
-//call on some DOMS
-
-//Handler Functions===============================================================================
-
-// Check answer - use answer array and .include
-//if it is correct
-//alert yay!
-//then move to the next question
-
-// Else if it is wrong
-// alert wrong,
-//ten seconds taken away,
-// move to the next question
-
-//WHEN all questions are answered or the timer reaches 0
-//THEN the game is over
-
 //Display Input===============================================================================
-
-//WHEN the game is over
-//Clear screen
-//Reset Timer
-//Submit Button appears
-
-//THEN I can save my initials and score
-//When click submit button
-//Return to the beginning of quiz
