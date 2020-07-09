@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="nav">
+      <a class="nav-link active" href="index.html">Start Over</a>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-10 col-xl-8" id="highscore-div">
+          <h2 id="scores-title">
+            New High Scores(Enter your name, your score, and hit submit):
+          </h2>
+          <ol id="list"></ol>
+          <h4 class="input-title">Name:</h4>
+          <input type="text" id="user-name" />
+          <h4 class="input-title">Score:</h4>
+          <input type="text" id="user-score" />
+          <button id="submit-score" value="add to list">Submit Score</button>
+        </div>
+      </div>
+      <h2 id="all-scores">All High Scores:</h2>
+      <div class="card">
+        <div class="card-body" id="display-scores"></div>
+      </div>
+    </div>
+    <script src="highscores.js"></script>
+  </body>
+</html>

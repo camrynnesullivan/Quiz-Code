@@ -1,15 +1,19 @@
 //Starting Data
 
-//Set Variables
-
+// Variables for Time Interval Function
 var timerEl = document.querySelector(".timer");
 var startEl = document.querySelector("#start");
+
+//Variable for Clear Screen Function
 var quizEl = document.querySelector("#quiz");
 
+//Variables for Option
 var optionA = document.querySelector("#optionA");
 var optionB = document.querySelector("#optionB");
 var optionC = document.querySelector("#optionC");
 var optionD = document.querySelector("#optionD");
+
+var results = document.querySelector("#results");
 
 function checkAnswerA() {
   var questionData = quiz[questionNumber]["a" + questionNumber];
@@ -73,6 +77,14 @@ function checkAnswerD() {
   // displayQuestion();
 }
 
+function displayCorrectMessage() {
+  results.textContent = "You were right! Here is your score: " + score;
+}
+
+function displayWrongMessage() {
+  results.textContent = "You were wrong! Here is your score: " + score;
+}
+
 optionA.addEventListener("click", checkAnswerA);
 optionB.addEventListener("click", checkAnswerB);
 optionC.addEventListener("click", checkAnswerC);
@@ -86,6 +98,7 @@ var question = document.querySelector("#question");
 
 var secondsLeft = 60;
 var score = 0;
+var click = 0;
 
 var answers = ["Andrew Lloyd Weber", "T.S. Eliott", "any cute beloved cat"];
 
