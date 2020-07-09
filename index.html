@@ -5,17 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CATS QUIZ</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- CSS only -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     
   </head>
   <body>
-    <a href =highscores.html>Start Over</a>
-    <div class="container">
-      <h1>CATS QUIZ</h1>
+    <br>
+    <main class="container">
+      <div class="jumbotron">
+        <h1 class="display-4">CATS the Musical Quiz</h1>
+        <hr class="my-4" />
+
+        <!-- First Row  -->
+        <section class="row">
+          <!-- First Row Column 1 Profile Pic -->
+          <article class="col-md-12">
+
+            <a href =highscores.html>Start Over</a>
+    
       <!-- start button  -->
       <button type="button" id="start">START</button>
       <!-- timer -->
       <span class="timer"></span>
-    </div>
+ 
 
     <div class="container" id="quiz">
       <div class="column">
@@ -37,6 +49,9 @@
       </div>
     </div>
   </div>
+         
+          </article>
+    
       <!-- <button type="button" id="button">User answer to populate</button>
         <div id="results"></div> -->
 
